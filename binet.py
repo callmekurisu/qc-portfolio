@@ -1,8 +1,10 @@
 import math
 import sys
 
-n = int(input('Enter fn: '))
-phi = 1.618
-psi = 1-phi
-fn = math.ceil((phi**n-psi**n) / (phi - psi))
-print(fn)
+# pass n as argument to script for fibonacci value
+arg = int(sys.argv[1])
+def binet_algo(n):
+    phi = 1.618
+    psi = 1-phi
+    return math.ceil((phi**n-psi**n) / (phi - psi))
+print(binet_algo(arg))
